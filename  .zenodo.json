@@ -1,0 +1,23 @@
+{
+  "title": "φ-Design Engine: Generative Design via Golden Ratio, Merkaba, and Vortex Curves",
+  "description": "12 generators of visual forms based on golden ratio, Fibonacci sequences, vortex dynamics, and Merkaba geometry. Exports to SVG, OBJ, and JSON with Betti topological invariants.",
+  "creators": [
+    {
+      "name": "Ziyavutdinov, Magomed Kamalovich",
+      "affiliation": "Independent Researcher",
+      "orcid": "0009-0005-9212-9921"
+    }
+  ],
+  "keywords": [
+    "generative design",
+    "golden ratio",
+    "Fibonacci",
+    "Merkaba",
+    "vortex",
+    "SVG generator"
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "language": "eng"
+}
