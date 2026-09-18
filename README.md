@@ -1,5 +1,3 @@
-# phi_design_engine
-12 generators of visual forms based on golden ratio, Fibonacci sequences, vortex dynamics, and Merkaba geometry. Exports to SVG, OBJ, and JSON with Betti topological invariants
 # φ-Design Engine
 
 > Генератор форм нового поколения на φ-структурах, Merkaba и вихревых кривых.
@@ -24,8 +22,8 @@
 ## 12 генераторов
 
 1. `phi_spiral` — логарифмическая φ-спираль
-2. `fibonacci_vortex` — кривая Γ(r) с φ-модуляцией ⭐
-3. `merkaba_crystal` — 8 слоёв встречного вращения ⭐
+2. `fibonacci_vortex` — кривая Γ(r) с φ-модуляцией
+3. `merkaba_crystal` — 8 слоёв встречного вращения
 4. `fibonacci_tree` — дерево с длинами ∝ F_k
 5. `tesseract_projection` — 4D-гиперкуб в 2D
 6. `koch_snowflake` — фрактал Коха
