@@ -8,7 +8,7 @@
 
 import math
 import argparse
-from typing import List, Tuple, Optional
+from typing import List, Tuple
 
 PHI = (1.0 + math.sqrt(5.0)) / 2.0
 INV_PHI = PHI - 1.0
@@ -25,7 +25,6 @@ class PhiShapeGenerator:
 
     @staticmethod
     def phi_spiral(n_points: int = 200, turns: float = 4.0):
-        """Логарифмическая φ-спираль: r = a·e^(b·θ)."""
         b = math.log(PHI) / (math.pi / 2)
         pts = []
         for i in range(n_points):
@@ -38,7 +37,6 @@ class PhiShapeGenerator:
     def fibonacci_vortex(n_points: int = 200,
                           circulation: float = 13.0,
                           k_layers: int = 5):
-        """Γ(r) = Γ₀·Σ F_k·φ^(−k·r/r_c)."""
         pts = []
         for i in range(n_points):
             r = 0.01 + (i / n_points) * 2.0
@@ -50,7 +48,6 @@ class PhiShapeGenerator:
 
     @staticmethod
     def merkaba_crystal(n_layers: int = 8, radius: float = 5.0):
-        """8 слоёв встречного вращения."""
         pts = []
         for layer in range(n_layers):
             r = radius * (PHI ** (-layer / n_layers))
@@ -63,7 +60,6 @@ class PhiShapeGenerator:
 
     @staticmethod
     def fibonacci_tree(depth: int = 6, trunk: float = 3.0):
-        """Рекурсивное дерево с φ-ветвлением."""
         pts = []
         def build(x, y, angle, length, d):
             if d > depth:
@@ -79,7 +75,6 @@ class PhiShapeGenerator:
 
     @staticmethod
     def fibonacci_phyllotaxis(n_points: int = 500, scale: float = 8.0):
-        """Филотаксис: θ = 2π·k/φ."""
         pts = []
         for k in range(1, n_points + 1):
             theta = TWO_PI * k / PHI
@@ -98,7 +93,6 @@ class PhiDesignEngine:
     def generate_svg(self, points: List[Tuple[float, float]],
                       path: str, width: int = 800, height: int = 800,
                       color: str = "#00ffcc"):
-        """Экспорт точек в SVG."""
         if not points:
             return None
         xs = [p[0] for p in points]
@@ -114,7 +108,7 @@ class PhiDesignEngine:
             sy = height - margin - (y - min_y) * scale
             return sx, sy
 
-        lines = [f'<?xml version="1.0" encoding="UTF-8"?>']
+        lines = ['<?xml version="1.0" encoding="UTF-8"?>']
         lines.append(f'<svg xmlns="http://www.w3.org/2000/svg" '
                      f'width="{width}" height="{height}">')
         lines.append(f'<rect width="100%" height="100%" fill="#0a0a0a"/>')
